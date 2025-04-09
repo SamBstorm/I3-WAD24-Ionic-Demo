@@ -1,13 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>profil</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>&lt;</ion-button>
+    </ion-buttons>
+    <ion-title slot="end">profil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" 
+scrollEvents="true" 
+(ionScroll)="duringScrolling($any($event))" 
+(ionScrollStart)="startToScroll()" 
+(ionScrollEnd)="endOfScroll()">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">profil</ion-title>
     </ion-toolbar>
   </ion-header>
+  <button (click)="scrollToBottom()">Go to Bottom</button>
+  <div id="container">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil nam doloribus eveniet vitae, facilis, accusantium laboriosam veritatis voluptate in vero odit assumenda aperiam, maxime cumque ipsam. Minus ea dolor accusantium!</p>
+    <p>Voluptatem sunt laboriosam ab. Reprehenderit quam consequuntur ullam quibusdam corrupti eos unde cum ut cupiditate, nulla, esse magni distinctio optio dolores facere error illo sit, fugit repellat vero voluptas provident.</p>
+    <p>Harum veritatis tempore consectetur et nisi quo amet voluptas, voluptatibus saepe itaque? Quia soluta quaerat blanditiis. Debitis dolores ex et? Nisi, quo soluta? Minus cum odio eius enim a ut?</p>
+    <p>Explicabo sit minima quaerat voluptatibus fugiat? Eveniet cum quisquam possimus pariatur animi impedit illum alias quod, tempore doloremque nihil expedita. Quo consectetur dolore illum atque voluptas aspernatur totam cumque placeat?</p>
+    <p>Fuga molestias quasi cumque sequi quod ducimus quaerat ea, provident repudiandae laudantium facere, omnis voluptatem tempora! Accusantium maxime ad error accusamus vero delectus nostrum exercitationem tempore ipsam, rerum sapiente magni!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quam commodi magnam quasi est, molestias pariatur tempora similique error alias aperiam nostrum, ab nulla, enim architecto dicta maiores corrupti sed!</p>
+    <p>Atque harum aliquam aliquid veritatis est voluptas corporis tenetur odio non sequi, quia nisi ratione rerum vel rem nulla sed asperiores fugiat culpa temporibus, beatae, similique saepe repudiandae perspiciatis. Pariatur!</p>
+    <p>Labore excepturi quam est quia molestiae dolorem laudantium quidem eveniet. In eligendi quam sequi quibusdam dolorum voluptatum mollitia doloremque, molestiae repudiandae quo? Nobis enim eligendi in unde, error totam? Ipsa.</p>
+    <p>Quaerat et ad labore consequuntur minus? Possimus amet enim rerum nobis similique iusto vel, libero quibusdam aut esse unde recusandae facere nemo vero, distinctio reprehenderit cupiditate! Aspernatur enim fugiat aut.</p>
+    <p>Architecto nesciunt iure rerum dicta similique iste, reprehenderit pariatur perferendis a placeat maxime voluptate nostrum sit ducimus veritatis est accusantium incidunt impedit! Quae rem facilis saepe inventore neque ipsa voluptate.</p>
+  </div>
+  <button (click)="scrollToTop()">Go to Top</button>
 </ion-content>
